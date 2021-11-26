@@ -167,6 +167,7 @@ header {
     position: relative;
   }
 
+  /* ------------ Hamburger Menu ------------ */
   .nav-toggle {
     cursor: pointer;
     border: 0;
@@ -216,13 +217,11 @@ header {
     transform: translateY(3px);
   }
 
+  /* ---- Navigation layout for smaller screens ---- */
   .nav {
     visibility: hidden;
     height: 0;
     position: absolute;
-  }
-
-  .nav {
     flex-direction: column;
   }
 
@@ -246,9 +245,15 @@ header {
     position: relative;
   }
 
+  .nav__link--button {
+    transition: none;
+  }
+
   .logo__link {
     justify-content: center;
   }
+
+  /* ---- General layout for smaller screens ---- */
   .row {
     display: block;
   }
