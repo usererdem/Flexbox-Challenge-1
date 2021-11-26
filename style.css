@@ -90,6 +90,10 @@ header {
   box-shadow: rgba(228, 10, 10, 0.24) 0px 3px 150px;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 /* ------------ Hero Section ------------ */
 .hero {
   background-color: #23424a;
@@ -117,7 +121,7 @@ header {
   color: #23424a;
   font-weight: 700;
   background-color: #38cfd9;
-  padding: 0.30em 2em;
+  padding: 0.3em 2em;
   border-radius: 100px;
   transition: all 0.3s;
 }
@@ -159,6 +163,92 @@ header {
 }
 
 @media (max-width: 800px) {
+  .container {
+    position: relative;
+  }
+
+  .nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072a2d;
+    color: white;
+    transition: opacity 250ms ease;
+
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+
+  .nav-toggle:focus,
+  .nav-toggle:hover {
+    opacity: 0.75;
+  }
+
+  .hamburger {
+    width: 50%;
+    position: relative;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    width: 100%;
+  }
+
+  .hamburger::before {
+    transform: translateY(-6px);
+  }
+
+  .hamburger::after {
+    transform: translateY(3px);
+  }
+
+  .nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .nav__item {
+    margin-top: 1rem;
+  }
+
+  .nav__item + .nav__item {
+    margin-left: 0;
+  }
+
+  .nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+  }
+
+  .logo__link {
+    justify-content: center;
+  }
   .row {
     display: block;
   }
